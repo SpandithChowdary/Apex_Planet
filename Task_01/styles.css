@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body :before{
+  
+  filter: blur(10px);
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/spiderman.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.circle {
+  width: 100%;
+  color: white;
+  padding:30px;
+  position: fixed;
+  display: flex;
+  top: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+.circle nav ul {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+.circle nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.circle nav ul li a:hover {
+  color: #ff6347;
+}
+
+h2 span {
+  color: #ff6347;
+}
+
+.content h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-bottom: #ff6347 2px solid;  
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-align:start;
+  margin-top: 100px;
+}
+.content img {
+  width: 600px;
+  height: 100%;
+  border: 2px solid #fff;
+  margin: auto;
+}
+
+.content img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.description {
+  max-width: 800px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+  background-color: rgba(74, 74, 74, 0.342);
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.movies{
+  display: grid;
+  grid: 500px / repeat(4, 1fr);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.movie {
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 50px;
+  text-decoration: underline #ff6347 2px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pic {
+  width: 600px;
+  height: 500px;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  max-width: 600px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.text h2 {
+  font-size: 40px;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+.text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.text .btn {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.text .btn:hover {
+  background-color: white;
+  color: #ff6347;
+  transition: background-color 0.3s ease;
+}
+.text .btn:active {
+  transform: scale(0.95);
+}
+.social::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bac.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+  opacity: 0.8;
+}
+.social > * {
+  position: relative;
+  z-index: 1;
+}
+.social {
+  position: relative;
+  background-size: cover;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.social h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.social a {
+  text-decoration: none;
+  color: #ff6347;
+  font-size: 20px;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+.social a:hover {
+  color: #e55347;
+}
+.icons{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+}
