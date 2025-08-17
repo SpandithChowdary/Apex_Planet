@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern SignUp Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #4361ee;
+      --primary-dark: #3a56d4;
+      --success-color: #4cc9f0;
+      --error-color: #f72585;
+      --text-color: #2b2d42;
+      --light-gray: #f8f9fa;
+      --medium-gray: #e9ecef;
+      --dark-gray: #adb5bd;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 450px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .box:hover {
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+    }
+    
+    .login, .signup {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .form-header h1 {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    .form-header p {
+      color: var(--dark-gray);
+      font-size: 0.95rem;
+    }
+    
+    .form-group {
+      position: relative;
+      margin-bottom: 5px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-color);
+      font-size: 0.9rem;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px 12px 40px;
+      border: 2px solid var(--medium-gray);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      background-color: var(--light-gray);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      background-color: white;
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    }
+    
+    .form-control::placeholder {
+      color: var(--dark-gray);
+      font-size: 0.9rem;
+    }
+    
+    .input-icon {
+      position: absolute;
+      left: 15px;
+      top: 38px;
+      color: var(--dark-gray);
+      font-size: 1rem;
+    }
+    
+    .btn {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .success-message {
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .success-message i {
+      font-size: 4rem;
+      color: var(--success-color);
+      margin-bottom: 20px;
+      animation: bounce 1s ease infinite;
+    }
+    
+    .success-message h1 {
+      font-size: 1.8rem;
+      color: var(--success-color);
+      margin-bottom: 15px;
+    }
+    
+    .success-message p {
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+    
+    .password-strength {
+      height: 4px;
+      background-color: var(--medium-gray);
+      border-radius: 2px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    
+    .strength-meter {
+      height: 100%;
+      width: 0%;
+      background-color: var(--error-color);
+      transition: var(--transition);
+    }
+    
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.8rem;
+      margin-top: 5px;
+      display: none;
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .box {
+        padding: 30px 20px;
+      }
+      
+      .form-header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<div class="container">
+  <div class="box">
+    <div class="login" id="loginSection">
+      <div class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <h1>Welcome aboard!</h1>
+        <p>Your account has been created successfully. We've sent a confirmation email to your address.</p>
+      </div>
+    </div>
+    <div class="signup" id="signupSection">
+      <form class="signup-form" id="signupForm">
+        <div class="form-header">
+          <h1>Create Account</h1>
+          <p>Join our community today</p>
+        </div>
+        
+        <div class="form-group">
+          <label for="nameInput">Full Name</label>
+          <i class="fas fa-user input-icon"></i>
+          <input type="text" id="nameInput" class="form-control" placeholder="John Doe">
+          <div class="error-message" id="nameError">Please enter your full name</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="emailInput">Email Address</label>
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" id="emailInput" class="form-control" placeholder="john@example.com">
+          <div class="error-message" id="emailError">Please enter a valid email address</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="passwordInput">Password</label>
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="passwordInput" class="form-control" placeholder="At least 6 characters">
+          <div class="password-strength">
+            <div class="strength-meter" id="strengthMeter"></div>
+          </div>
+          <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPasswordInput">Confirm Password</label>
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" id="confirmPasswordInput" class="form-control" placeholder="Re-enter your password">
+          <div class="error-message" id="confirmPasswordError">Passwords don't match</div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" id="submitButton">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginSection = document.getElementById('loginSection');
+    const signupSection = document.getElementById('signupSection');
+    const signupForm = document.getElementById('signupForm');
+    const passwordInput = document.getElementById('passwordInput');
+    const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+    const strengthMeter = document.getElementById('strengthMeter');
+    loginSection.style.display = 'none';
+    passwordInput.addEventListener('input', function() {
+      const password = this.value;
+      let strength = 0;
+      
+      if (password.length >= 6) strength += 25;
+      if (password.length >= 8) strength += 25;
+      if (/[A-Z]/.test(password)) strength += 25;
+      if (/[0-9]/.test(password)) strength += 25;
+      
+      strengthMeter.style.width = strength + '%';
+      
+      if (strength < 50) {
+        strengthMeter.style.backgroundColor = '#f72585'; 
+      } else if (strength < 75) {
+        strengthMeter.style.backgroundColor = '#ffbe0b';
+      } else {
+        strengthMeter.style.backgroundColor = '#4cc9f0'; 
+      }
+    });
+    signupForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let isValid = true;
+      document.querySelectorAll('.error-message').forEach(el => {
+        el.style.display = 'none';
+      });
+      const name = document.getElementById('nameInput').value.trim();
+      if (name === '') {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      }
+      const email = document.getElementById('emailInput').value.trim();
+      if (!validateEmail(email)) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+      }
+      const password = passwordInput.value;
+      if (password.length < 6) {
+        document.getElementById('passwordError').style.display = 'block';
+        isValid = false;
+      }
+      const confirmPassword = confirmPasswordInput.value;
+      if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').style.display = 'block';
+        isValid = false;
+      }
+      
+      if (isValid) {
+        signupSection.style.opacity = '0';
+        signupSection.style.transform = 'translateY(-20px)';
+        signupSection.style.transition = 'all 0.5s ease';
+        
+        setTimeout(() => {
+          signupSection.style.display = 'none';
+          loginSection.style.display = 'block';
+          loginSection.style.opacity = '0';
+          loginSection.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            loginSection.style.opacity = '1';
+            loginSection.style.transform = 'translateY(0)';
+          }, 10);
+        }, 500);
+      }
+    });
+    
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+  });
+</script>
+</body>
+</html>
