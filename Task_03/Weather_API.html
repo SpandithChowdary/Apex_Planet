@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherSphere | Modern Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="weather.css">
+  </head>
+  <body>
+    <div class="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <header class="header glass animate">
+      <a href="#" class="logo">
+        <i class="fas fa-cloud-sun"></i>
+        <span>WeatherSphere</span>
+      </a>
+      <nav class="nav">
+        <a href="#" class="nav-link active" id="homeLink">Home</a>
+        <a href="#" class="nav-link" id="forecastLink">Forecast</a>
+        <a href="#" class="nav-link" id="mapLink">Map</a>
+        <button class="theme-toggle" id="darkModeToggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="hero animate delay-1">
+        <h1>Weather Dashboard</h1>
+        <p>
+          Get accurate weather forecasts for any location around the world with
+          beautiful visualizations and detailed metrics.
+        </p>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search for a city..."
+            id="searchInput"
+            value="Tirupati"
+          />
+          <button class="search-btn" id="searchBtn">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+        <div
+          id="errorMessage"
+          class="error-message"
+          style="display: none"
+        ></div>
+      </section>
+
+      <section
+        class="current-weather animate delay-2"
+        id="currentWeatherSection"
+      >
+        <div class="weather-card glass">
+          <div class="weather-main">
+            <div class="location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span id="location">Loading...</span>
+            </div>
+            <div class="date-time" id="dateTime">
+              Monday, July 28, 2025 • 3:45 PM
+            </div>
+
+            <div class="temp-container">
+              <img
+                src=""
+                alt="Weather Icon"
+                class="weather-icon"
+                id="weatherIcon"
+              />
+              <div>
+                <div class="current-temp" id="temperature">--°C</div>
+                <div class="condition" id="condition">--</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-card glass">
+              <i class="fas fa-tint"></i>
+              <div class="detail-title">Humidity</div>
+              <div class="detail-value" id="humidity">--%</div>
+            </div>
+
+            <div class="detail-card glass">
+              <i class="fas fa-wind"></i>
+              <div class="detail-title">Wind Speed</div>
+              <div class="detail-value" id="wind">-- km/h</div>
+            </div>
+
+            <div class="detail-card glass">
+              <i class="fas fa-sun"></i>
+              <div class="detail-title">UV Index</div>
+              <div class="detail-value" id="uv">--</div>
+            </div>
+
+            <div class="detail-card glass">
+              <i class="fas fa-eye"></i>
+              <div class="detail-title">Visibility</div>
+              <div class="detail-value" id="visibility">-- km</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="hourly-forecast animate delay-3"
+        id="hourlyForecastSection"
+      >
+        <h2 class="section-title">Hourly Forecast</h2>
+        <div class="chart-container glass">
+          <canvas id="hourlyChart"></canvas>
+        </div>
+
+        <div class="hourly-container" id="hourlyForecastContainer">
+        </div>
+      </section>
+
+      <section
+        class="daily-forecast animate delay-4"
+        id="dailyForecastSection"
+        style="display: none"
+      >
+        <h2 class="section-title">7-Day Forecast</h2>
+        <div class="forecast-container" id="dailyForecastContainer">
+        </div>
+      </section>
+
+      <section class="map-section glass animate delay-3" id="mapSection">
+        <h2 class="section-title">Weather Map</h2>
+        <div id="weatherMap"></div>
+      </section>
+    </div>
+
+    <footer class="footer glass animate delay-5">
+      <p>© 2025 WeatherSphere. All rights reserved.</p>
+      <p>
+        <a href="https://openweathermap.org/api" target="_blank"
+          >Powered by OpenWeatherMap API</a
+        >
+        | <a href="#" target="_blank">Privacy Policy</a> |
+        <a href="#" target="_blank">Terms of Service</a>
+      </p>
+    </footer>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="Loader">
+      <h1>Quiz is Loading...</h1>
+      <div class="spinner"></div>
+    </div>
+    <div class="Loader2">
+      <h1>Please wait...</h1>
+      <div class="spinner"></div>
+    </div>
+    <div class="main-page">
+      <div class="maincontainer">
+        <h1>Quiz App</h1>
+        <p>
+          Welcome to the Quiz App! Test your knowledge with our fun quizzes.
+        </p>
+        <div class="container">
+          <div class="label" id="JavaScript">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+              alt="JavaScript Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>JavaScript</h3>
+          </div>
+          <div class="label" id="HTML">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+              alt="HTML Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>HTML</h3>
+          </div>
+          <div class="label" id="CSS">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+              alt="CSS Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>CSS</h3>
+          </div>
+          <div class="label" id="Python">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+              alt="Python Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>Python</h3>
+          </div>
+          <div class="label" id="Java">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+              alt="Java Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>Java</h3>
+          </div>
+          <div class="label" id="Cplus">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"
+              alt="C++ Logo"
+              style="width: 100px; height: 100px"
+            />
+            <h3>C++</h3>
+          </div>
+          <div class="label" id="mysql">
+            <img
+              src="https://www.mysql.com/common/logos/logo-mysql-170x115.png"
+              alt="MySQL Logo"
+              style="width: 100px; height: 100px"
+            />
+
+            <h3>MySQL</h3>
+          </div>
+          <div class="label" id="mongodb">
+            <img
+              src="https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png"
+              alt="MongoDB Logo"
+              style="width: 100px; height: 100px"
+            />
+
+            <h3>MongoDB</h3>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-container">
+        <h1>Quiz Title</h1>
+        <div class="question">Question will be displayed here</div>
+        <ul class="options">
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+          <li>Option 4</li>
+        </ul>
+        <div class="result">
+          <h2>Answer is : <span id="score">Correct</span></h2>
+        </div>
+        <div class="Points">
+          <h2>Your Score :<span id="marks">0</span></h2>
+        </div>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
+
+    <script src="quiz_data.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

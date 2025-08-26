@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth Carousel</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .main {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #222;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.5s ease;
+        position: relative;
+      }
+
+      .carousel-container {
+        width: 80%;
+        max-width: 1000px;
+        margin-bottom: 50px;
+        position: relative;
+      }
+
+      .carousel-wrapper {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 15px 0;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+        will-change: transform;
+      }
+
+      .carousel-img {
+        width: 200px;
+        height: 120px;
+        margin: 0 10px;
+        object-fit: cover;
+        border-radius: 8px;
+        opacity: 0.6;
+        transform: scale(0.9);
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+      }
+
+      .carousel-img.active {
+        opacity: 1;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+      }
+
+      .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      #prevBtn {
+        left: 20px;
+      }
+
+      #nextBtn {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div class="carousel-container">
+        <button id="prevBtn" class="nav-btn" type="button">⟨</button>
+        <div class="carousel-wrapper">
+          <div class="carousel" id="carousel"></div>
+        </div>
+        <button id="nextBtn" class="nav-btn" type="button">⟩</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const imagePaths = [
+          "img/img1.jpg",
+          "img/img2.jpg",
+          "img/img3.jpg",
+          "img/img4.jpg",
+          "img/img5.jpg",
+          "img/img6.jpg",
+          "img/img7.jpg",
+          "img/img8.jpg",
+          "img/img9.jpg",
+          "img/img10.jpg",
+        ];
+
+        const carousel = document.getElementById("carousel");
+        const main = document.getElementById("main");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        const imageWidth = 220;
+        let currentIndex = 0;
+        let isAnimating = false;
+        function initCarousel() {
+          carousel.innerHTML = "";
+          for (let i = imagePaths.length - 3; i < imagePaths.length; i++) {
+            addImageToCarousel(imagePaths[i]);
+          }
+          imagePaths.forEach((path) => {
+            addImageToCarousel(path);
+          });
+          for (let i = 0; i < 3; i++) {
+            addImageToCarousel(imagePaths[i]);
+          }
+          currentIndex = 3;
+          updateCarousel(false);
+        }
+
+        function addImageToCarousel(src) {
+          const img = document.createElement("img");
+          img.src = src;
+          img.className = "carousel-img";
+          carousel.appendChild(img);
+        }
+
+        function updateCarousel(animate = true) {
+          const images = document.querySelectorAll(".carousel-img");
+
+          if (animate) {
+            carousel.style.transition = "transform 0.8s ease";
+          } else {
+            carousel.style.transition = "none";
+          }
+
+          const centerOffset =
+            carousel.parentElement.offsetWidth / 2 - imageWidth / 2;
+          const targetPosition = -(currentIndex * imageWidth) + centerOffset;
+          carousel.style.transform = `translateX(${targetPosition}px)`;
+
+          requestAnimationFrame(() => {
+            images.forEach((img, index) => {
+              img.classList.remove("active");
+              if (index === currentIndex) {
+                img.classList.add("active");
+                main.style.backgroundImage = `url(${img.src})`;
+              }
+            });
+          });
+        }
+        function nextSlide() {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          currentIndex++;
+          updateCarousel(true);
+          const images = document.querySelectorAll(".carousel-img");
+          if (currentIndex >= images.length - 3) {
+            setTimeout(() => {
+              carousel.style.transition = "none";
+              currentIndex = 3;
+              updateCarousel(false);
+              isAnimating = false;
+            }, 500);
+          } else {
+            setTimeout(() => {
+              isAnimating = false;
+            }, 500);
+          }
+        }
+        function prevSlide() {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          currentIndex--;
+          updateCarousel(true);
+          const images = document.querySelectorAll(".carousel-img");
+          if (currentIndex < 3) {
+            setTimeout(() => {
+              carousel.style.transition = "none";
+              currentIndex = images.length - 4;
+              updateCarousel(false);
+              isAnimating = false;
+            }, 500);
+          } else {
+            setTimeout(() => {
+              isAnimating = false;
+            }, 500);
+          }
+        }
+        nextBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          nextSlide();
+        });
+
+        prevBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          prevSlide();
+        });
+        initCarousel();
+        window.addEventListener("resize", () => {
+          updateCarousel(false);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke API</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .load{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background: linear-gradient(to left,rgb(14, 150, 150), rgb(25, 104, 104));
+        width: 100%;
+        min-height: 100vh;
+      }
+      .load img{
+        width: 1000px;
+      }
+      .main {
+        display: none;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(31, 95, 95);
+        width: 100%;
+        min-height: 100vh;
+      }
+      .doremon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        transform: scalex(-1);
+      }
+      .doremon img {
+        width: 350px;
+      }
+      .nobita {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+      }
+      .nobita img {
+        width: 450px;
+      }
+      .Joke {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        min-height: 100%;
+        background-color: rgb(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid white;
+        box-shadow: 0px 0px 10px black;
+        margin: 50px 20px 40px 20px;
+        border-radius: 20px;
+      }
+      .Joke h1 {
+        margin-top: 20px;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(34, 88, 44);
+        -webkit-text-stroke: 1px rgb(212, 221, 221);
+      }
+      .btn {
+        font-size: 16px;
+        color: white;
+        background-color: rgb(31, 95, 95);
+        margin-top: 50px;
+        padding: 10px 30px 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.414);
+        transition: 0.3s ease;
+      }
+
+      .btn:hover {
+        color: white;
+        background-color: rgba(19, 127, 127, 0.671);
+      }
+
+      .btn:active {
+        transform: scale(0.9);
+      }
+      .Joke h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        color: black;
+        margin: 70px 20px 40px 20px;
+      }
+      .Joke p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        margin: 50px 20px 40px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class ="load">
+      <img src="img/load.webp"/>
+    </div>
+    <div class="main">
+      <div class="nobita">
+        <img src="img/nobita.webp" />
+      </div>
+      <div class="Joke">
+        <h1>Joke API</h1>
+        <button class="btn" id="btn">Get the Joke</button>
+        <div class="best"></div>
+      </div>
+      <div class="doremon">
+        <img src="img/doremon.webp" />
+      </div>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn.onclick = () => {
+        const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist";
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const jokeContainer = document.querySelector(".best");
+            jokeContainer.innerHTML="";
+            if (data.type === "single") {
+              const h1 = document.createElement("h3");
+              h1.textContent = data.joke;
+              jokeContainer.appendChild(h1);
+            } else {
+              const p1 = document.createElement("p");
+              p1.textContent = data.setup;
+
+              const p2 = document.createElement("p");
+              p2.textContent = data.delivery;
+
+              jokeContainer.appendChild(p1);
+              jokeContainer.appendChild(p2);
+            }
+
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      };
+
+      window.addEventListener("load",()=>{
+        setTimeout(()=>{
+          document.querySelector(".load").style.display="none";
+          document.querySelector(".main").style.display="flex";
+        },5000);
+      });
+    </script>
+  </body>
+</html>
