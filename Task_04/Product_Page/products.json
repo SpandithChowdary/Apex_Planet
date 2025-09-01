@@ -1,0 +1,884 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "img": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9",
+      "name": "MacBook Pro 14-inch",
+      "cost": 1999.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "img": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+      "name": "Sony WH-1000XM4 Headphones",
+      "cost": 349.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 3,
+      "img": "https://images.unsplash.com/photo-1461151304267-38535e780c79",
+      "name": "Samsung 4K Smart TV",
+      "cost": 899.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 4,
+      "img": "https://images.unsplash.com/photo-1587132137056-bfbf0166836e",
+      "name": "Apple iPad Air",
+      "cost": 599.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 5,
+      "img": "https://images.unsplash.com/photo-1545454675-3531b543be5d",
+      "name": "Bose Soundbar 700",
+      "cost": 799.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 6,
+      "img": "https://images.unsplash.com/photo-1579829366248-204fe8413f31",
+      "name": "DJI Mavic Air 2 Drone",
+      "cost": 999.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 7,
+      "img": "https://images.unsplash.com/photo-1638542706626-5b828e4d5215",
+      "name": "Nintendo Switch OLED",
+      "cost": 349.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 8,
+      "img": "https://images.unsplash.com/photo-1624923688190-1dd33d753fce",
+      "name": "GoPro HERO10 Black",
+      "cost": 499.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 9,
+      "img": "https://images.unsplash.com/photo-1636489953081-57b7beb21a1e",
+      "name": "Amazon Echo Studio",
+      "cost": 199.99,
+      "rating": 3,
+      "category": "Electronics"
+    },
+    {
+      "id": 10,
+      "img": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3",
+      "name": "PlayStation 5 Console",
+      "cost": 499.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 11,
+      "img": "https://images.unsplash.com/photo-1637430309865-0e2b847b11e9",
+      "name": "Xbox Series X",
+      "cost": 499.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 12,
+      "img": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a",
+      "name": "Fitbit Sense Smartwatch",
+      "cost": 299.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 13,
+      "img": "https://images.unsplash.com/photo-1512790182412-b19e6d62bc39",
+      "name": "Canon EOS R6 Camera",
+      "cost": 2499.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 14,
+      "img": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+      "name": "Sony A7 III Mirrorless",
+      "cost": 1999.99,
+      "rating": 5,
+      "category": "Electronics"
+    },
+    {
+      "id": 15,
+      "img": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+      "name": "Bose QuietComfort Earbuds",
+      "cost": 279.99,
+      "rating": 4,
+      "category": "Electronics"
+    },
+    {
+      "id": 16,
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+      "name": "Men's Casual T-Shirt",
+      "cost": 24.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 17,
+      "img": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03",
+      "name": "Women's Summer Dress",
+      "cost": 49.99,
+      "rating": 5,
+      "category": "Clothing"
+    },
+    {
+      "id": 18,
+      "img": "https://images.unsplash.com/photo-1542272604-787c3835535d",
+      "name": "Denim Jeans",
+      "cost": 59.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 19,
+      "img": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+      "name": "Winter Jacket",
+      "cost": 129.99,
+      "rating": 5,
+      "category": "Clothing"
+    },
+    {
+      "id": 20,
+      "img": "https://images.unsplash.com/photo-1542272604-787c3835535d",
+      "name": "Athletic Shorts",
+      "cost": 34.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 21,
+      "img": "https://images.unsplash.com/photo-1539533018447-63fcce2678e4",
+      "name": "Formal Blazer",
+      "cost": 149.99,
+      "rating": 5,
+      "category": "Clothing"
+    },
+    {
+      "id": 22,
+      "img": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9",
+      "name": "Cashmere Sweater",
+      "cost": 89.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 23,
+      "img": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+      "name": "Leather Belt",
+      "cost": 39.99,
+      "rating": 3,
+      "category": "Clothing"
+    },
+    {
+      "id": 24,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "Cotton Socks Pack",
+      "cost": 12.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 25,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "Silk Scarf",
+      "cost": 29.99,
+      "rating": 5,
+      "category": "Clothing"
+    },
+    {
+      "id": 26,
+      "img": "https://images.unsplash.com/photo-1592155931584-901ac15763e3",
+      "name": "Swim Trunks",
+      "cost": 34.99,
+      "rating": 4,
+      "category": "Clothing"
+    },
+    {
+      "id": 27,
+      "img": "https://images.unsplash.com/photo-1593784991095-a205069470b6",
+      "name": "Wool Beanie",
+      "cost": 19.99,
+      "rating": 3,
+      "category": "Clothing"
+    },
+    {
+      "id": 28,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "Atomic Habits",
+      "cost": 14.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 29,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "The Psychology of Money",
+      "cost": 12.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 30,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "Deep Work",
+      "cost": 13.99,
+      "rating": 4,
+      "category": "Books"
+    },
+    {
+      "id": 31,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "Educated: A Memoir",
+      "cost": 11.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 32,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "The Alchemist",
+      "cost": 9.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 33,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "Sapiens",
+      "cost": 15.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 34,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "The Silent Patient",
+      "cost": 10.99,
+      "rating": 4,
+      "category": "Books"
+    },
+    {
+      "id": 35,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "Where the Crawdads Sing",
+      "cost": 12.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 36,
+      "img": "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      "name": "The Midnight Library",
+      "cost": 13.99,
+      "rating": 4,
+      "category": "Books"
+    },
+    {
+      "id": 37,
+      "img": "https://images.unsplash.com/photo-1589998059171-988d887df646",
+      "name": "Project Hail Mary",
+      "cost": 14.99,
+      "rating": 5,
+      "category": "Books"
+    },
+    {
+      "id": 38,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Non-Stick Cookware Set",
+      "cost": 129.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 39,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Air Fryer",
+      "cost": 89.99,
+      "rating": 5,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 40,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Blender",
+      "cost": 49.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 41,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Coffee Maker",
+      "cost": 79.99,
+      "rating": 5,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 42,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Cutlery Set",
+      "cost": 59.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 43,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Dinnerware Set",
+      "cost": 69.99,
+      "rating": 5,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 44,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Food Storage Containers",
+      "cost": 29.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 45,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Glass Mixing Bowls",
+      "cost": 34.99,
+      "rating": 3,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 46,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Knife Block Set",
+      "cost": 89.99,
+      "rating": 5,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 47,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Pressure Cooker",
+      "cost": 79.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 48,
+      "img": "https://images.unsplash.com/photo-1583771720370-885a7e2f1855",
+      "name": "Rice Cooker",
+      "cost": 49.99,
+      "rating": 4,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 49,
+      "img": "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+      "name": "Toaster",
+      "cost": 39.99,
+      "rating": 3,
+      "category": "Home & Kitchen"
+    },
+    {
+      "id": 50,
+      "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c",
+      "name": "Skincare Gift Set",
+      "cost": 49.99,
+      "rating": 4,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 51,
+      "img": "https://images.unsplash.com/photo-1591088398332-8a7791972803",
+      "name": "Hair Dryer",
+      "cost": 59.99,
+      "rating": 4,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 52,
+      "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c",
+      "name": "Electric Toothbrush",
+      "cost": 89.99,
+      "rating": 5,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 53,
+      "img": "https://images.unsplash.com/photo-1591088398332-8a7791972803",
+      "name": "Facial Cleanser",
+      "cost": 19.99,
+      "rating": 4,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 54,
+      "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c",
+      "name": "Perfume",
+      "cost": 79.99,
+      "rating": 5,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 55,
+      "img": "https://images.unsplash.com/photo-1591088398332-8a7791972803",
+      "name": "Makeup Brush Set",
+      "cost": 29.99,
+      "rating": 4,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 56,
+      "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c",
+      "name": "Sunscreen Lotion",
+      "cost": 14.99,
+      "rating": 3,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 57,
+      "img": "https://images.unsplash.com/photo-1591088398332-8a7791972803",
+      "name": "Hair Straightener",
+      "cost": 69.99,
+      "rating": 4,
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": 58,
+      "img": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+      "name": "Yoga Mat",
+      "cost": 29.99,
+      "rating": 4,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 59,
+      "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "name": "Dumbbell Set",
+      "cost": 89.99,
+      "rating": 5,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 60,
+      "img": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+      "name": "Running Shoes",
+      "cost": 119.99,
+      "rating": 5,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 61,
+      "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "name": "Tennis Racket",
+      "cost": 79.99,
+      "rating": 4,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 62,
+      "img": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+      "name": "Camping Tent",
+      "cost": 149.99,
+      "rating": 5,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 63,
+      "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "name": "Bicycle",
+      "cost": 399.99,
+      "rating": 4,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 64,
+      "img": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+      "name": "Hiking Backpack",
+      "cost": 89.99,
+      "rating": 5,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 65,
+      "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "name": "Fitness Tracker",
+      "cost": 99.99,
+      "rating": 4,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 66,
+      "img": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31",
+      "name": "Swimming Goggles",
+      "cost": 24.99,
+      "rating": 3,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 67,
+      "img": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "name": "Yoga Blocks",
+      "cost": 19.99,
+      "rating": 4,
+      "category": "Sports & Outdoors"
+    },
+    {
+      "id": 68,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Wireless Charger",
+      "cost": 19.99,
+      "rating": 3,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 69,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Phone Case",
+      "cost": 14.99,
+      "rating": 4,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 70,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Screen Protector",
+      "cost": 9.99,
+      "rating": 3,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 71,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Bluetooth Earbuds",
+      "cost": 49.99,
+      "rating": 4,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 72,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Power Bank",
+      "cost": 29.99,
+      "rating": 4,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 73,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Car Phone Mount",
+      "cost": 12.99,
+      "rating": 3,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 74,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "USB-C Cable",
+      "cost": 8.99,
+      "rating": 4,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 75,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Phone Stand",
+      "cost": 7.99,
+      "rating": 3,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 76,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Selfie Stick",
+      "cost": 14.99,
+      "rating": 3,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 77,
+      "img": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+      "name": "Multi-Port Adapter",
+      "cost": 24.99,
+      "rating": 4,
+      "category": "Mobile Accessories"
+    },
+    {
+      "id": 78,
+      "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "name": "Gaming Laptop",
+      "cost": 1499.99,
+      "rating": 4,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 79,
+      "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "name": "Ultrabook",
+      "cost": 1299.99,
+      "rating": 5,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 80,
+      "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "name": "External SSD",
+      "cost": 129.99,
+      "rating": 5,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 81,
+      "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "name": "Mechanical Keyboard",
+      "cost": 89.99,
+      "rating": 4,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 82,
+      "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "name": "Gaming Mouse",
+      "cost": 59.99,
+      "rating": 4,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 83,
+      "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "name": "Monitor",
+      "cost": 249.99,
+      "rating": 5,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 84,
+      "img": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45",
+      "name": "Docking Station",
+      "cost": 79.99,
+      "rating": 4,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 85,
+      "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "name": "Wireless Mouse",
+      "cost": 29.99,
+      "rating": 3,
+      "category": "Computers & Laptops"
+    },
+    {
+      "id": 86,
+      "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+      "name": "Organic Coffee Beans",
+      "cost": 12.99,
+      "rating": 4,
+      "category": "Grocery"
+    },
+    {
+      "id": 87,
+      "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+      "name": "Extra Virgin Olive Oil",
+      "cost": 14.99,
+      "rating": 5,
+      "category": "Grocery"
+    },
+    {
+      "id": 88,
+      "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+      "name": "Dark Chocolate",
+      "cost": 6.99,
+      "rating": 5,
+      "category": "Grocery"
+    },
+    {
+      "id": 89,
+      "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+      "name": "Organic Honey",
+      "cost": 9.99,
+      "rating": 4,
+      "category": "Grocery"
+    },
+    {
+      "id": 90,
+      "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150",
+      "name": "Almond Butter",
+      "cost": 8.99,
+      "rating": 4,
+      "category": "Grocery"
+    },
+    {
+      "id": 91,
+      "img": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "name": "Leather Recliner",
+      "cost": 499.99,
+      "rating": 5,
+      "category": "Furniture"
+    },
+    {
+      "id": 92,
+      "img": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+      "name": "Coffee Table",
+      "cost": 199.99,
+      "rating": 4,
+      "category": "Furniture"
+    },
+    {
+      "id": 93,
+      "img": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "name": "Bookshelf",
+      "cost": 149.99,
+      "rating": 4,
+      "category": "Furniture"
+    },
+    {
+      "id": 94,
+      "img": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+      "name": "Dining Table Set",
+      "cost": 899.99,
+      "rating": 5,
+      "category": "Furniture"
+    },
+    {
+      "id": 95,
+      "img": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "name": "Office Chair",
+      "cost": 249.99,
+      "rating": 4,
+      "category": "Furniture"
+    },
+    {
+      "id": 96,
+      "img": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+      "name": "Sofa Bed",
+      "cost": 699.99,
+      "rating": 5,
+      "category": "Furniture"
+    },
+    {
+      "id": 97,
+      "img": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "name": "TV Stand",
+      "cost": 179.99,
+      "rating": 4,
+      "category": "Furniture"
+    },
+    {
+      "id": 98,
+      "img": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+      "name": "Accent Chair",
+      "cost": 199.99,
+      "rating": 4,
+      "category": "Furniture"
+    },
+    {
+      "id": 99,
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "name": "Smart Watch Series 5",
+      "cost": 299.99,
+      "rating": 4,
+      "category": "Watches"
+    },
+    {
+      "id": 100,
+      "img": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49",
+      "name": "Luxury Chronograph",
+      "cost": 599.99,
+      "rating": 5,
+      "category": "Watches"
+    },
+    {
+      "id": 101,
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "name": "Fitness Tracker Watch",
+      "cost": 129.99,
+      "rating": 4,
+      "category": "Watches"
+    },
+    {
+      "id": 102,
+      "img": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49",
+      "name": "Classic Leather Watch",
+      "cost": 149.99,
+      "rating": 5,
+      "category": "Watches"
+    },
+    {
+      "id": 103,
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "name": "Digital Sports Watch",
+      "cost": 79.99,
+      "rating": 3,
+      "category": "Watches"
+    },
+    {
+      "id": 104,
+      "img": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49",
+      "name": "Minimalist Watch",
+      "cost": 89.99,
+      "rating": 4,
+      "category": "Watches"
+    },
+    {
+      "id": 105,
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "name": "Diver's Watch",
+      "cost": 399.99,
+      "rating": 5,
+      "category": "Watches"
+    },
+    {
+      "id": 106,
+      "img": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+      "name": "Lego Classic Set",
+      "cost": 39.99,
+      "rating": 5,
+      "category": "Toys"
+    },
+    {
+      "id": 107,
+      "img": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+      "name": "Remote Control Car",
+      "cost": 49.99,
+      "rating": 4,
+      "category": "Toys"
+    },
+    {
+      "id": 108,
+      "img": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+      "name": "Board Game",
+      "cost": 29.99,
+      "rating": 5,
+      "category": "Toys"
+    },
+    {
+      "id": 109,
+      "img": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+      "name": "Drone Toy",
+      "cost": 59.99,
+      "rating": 4,
+      "category": "Toys"
+    },
+    {
+      "id": 110,
+      "img": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+      "name": "Building Blocks",
+      "cost": 24.99,
+      "rating": 4,
+      "category": "Toys"
+    }
+  ]
+}

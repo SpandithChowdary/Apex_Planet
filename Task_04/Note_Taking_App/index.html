@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Notes | Modern Note Taking App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="title">
+          <h1><i class="fa-solid fa-boxes-stacked"></i>Quick Notes</h1>
+        </div>
+        <div class="menu">
+          <nav>
+            <a href="#" class="nav_link active" id="home">
+              <i class="fa-solid fa-house"></i>Home
+            </a>
+            <a href="#" class="nav_link" id="notes">
+              <i class="fa-solid fa-clipboard"></i>All Notes
+            </a>
+            <a href="#" class="nav_link" id="fav">
+              <i class="fa-solid fa-star"></i>Favorite
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="page">
+        <div class="welcome-box">
+          <p>Welcome to Quick Notes!</p>
+        </div>
+        <div class="note-editor">
+          <h1>New Note</h1>
+          <div class="note-input">
+            <input type="text" id="note-title" placeholder="Note title" />
+          </div>
+          <div class="note-input">
+            <textarea id="note-content" placeholder="Write your note here..."></textarea>
+          </div>
+          <div class="note-actions">
+            <button class="btn btn-primary" id="save-btn">
+              <i class="fas fa-save"></i>Save Note
+            </button>
+            <button class="btn btn-secondary" id="cancel-btn">
+              <i class="fas fa-times"></i>Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
